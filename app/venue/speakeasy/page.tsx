@@ -789,21 +789,20 @@ export default function SpeakeasyVenuePage() {
         style={{ background: "rgba(155,28,28,0.04)" }}
       >
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-32">
+          <div className="text-center mb-24 md:mb-32">
             <h2
               className="font-display"
               style={{
-                fontSize: "clamp(2.5rem, 6vw, 5rem)",
+                fontSize: "clamp(3rem, 7vw, 6.5rem)",
                 color: "var(--color-cream)",
-                lineHeight: 1.3,
+                lineHeight: 1.1,
               }}
             >
-              Your Aesthetic.
-              <br />
-              Your Rules.
+              Visualise the
+              Atmosphere.
             </h2>
           </div>
-          <div className="mt-12">
+          <div className="mt-16">
             <MoodBoard venue="speakeasy" />
           </div>
         </div>
@@ -812,27 +811,26 @@ export default function SpeakeasyVenuePage() {
       {/* ─── CONCIERGE ─── */}
       <section className="speak-reveal py-60 md:py-80 px-6 relative z-10">
         <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-20">
+          <div className="text-center mb-24 md:mb-32">
             <div
-              className="font-ui text-xs mb-6"
-              style={{ color: "rgba(212,160,23,0.6)", letterSpacing: "0.4em" }}
+              className="font-ui text-xs mb-8"
+              style={{ color: "var(--speak-amber)", letterSpacing: "0.5em" }}
             >
-              ANONYMOUS · INSTANT
+              YOUR DIGITAL CONCIERGE
             </div>
             <h2
               className="font-display"
               style={{
-                fontSize: "clamp(2.5rem, 6vw, 5rem)",
+                fontSize: "clamp(3.5rem, 8vw, 7rem)",
                 color: "var(--color-cream)",
                 lineHeight: 1,
               }}
             >
-              The Invisible
-              <br />
-              Steward.
+              Ready to
+              Details?
             </h2>
           </div>
-          <div className="mt-12">
+          <div className="mt-16 relative">
             <ConciergeChatWidget venue="speakeasy" />
           </div>
         </div>

@@ -193,19 +193,21 @@ export default function ConciergeChatWidget({ venue }: Props) {
 
   return (
     <div
-      className="glass-card overflow-hidden"
+      className="glass-card flex flex-col mx-auto w-full max-w-2xl"
       style={{
-        background: venue === "rustic" ? "rgba(28,18,9,0.9)" : "rgba(13,10,14,0.92)",
-        border: `1px solid rgba(${accentRGB},0.15)`,
-        borderRadius: "8px",
+        background: venue === "rustic" ? "rgba(28,18,9,0.75)" : "rgba(13,10,14,0.85)",
+        border: `1.5px solid rgba(${accentRGB},0.15)`,
+        boxShadow: `0 32px 100px -20px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05)`,
+        backdropFilter: "blur(40px)",
+        borderRadius: "4px",
       }}
     >
       {/* Chat header */}
       <div
-        className="px-6 py-4 flex items-center gap-3"
+        className="px-8 py-6 flex items-center gap-4"
         style={{
-          borderBottom: `1px solid rgba(${accentRGB},0.1)`,
-          background: "rgba(0,0,0,0.3)",
+          borderBottom: `1px solid rgba(${accentRGB},0.12)`,
+          background: "rgba(0,0,0,0.4)",
         }}
       >
         <div

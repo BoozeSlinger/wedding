@@ -51,39 +51,42 @@ export default function MoodBoard({ venue }: Props) {
 
   return (
     <div
-      className="glass-card p-8 md:p-10"
+      className="glass-card p-10 md:p-14"
       style={{
-        background: venue === "rustic" ? "rgba(28,18,9,0.8)" : "rgba(13,10,14,0.85)",
-        border: `1px solid rgba(${accentRGB},0.12)`,
-        backdropFilter: "blur(20px)",
+        background: venue === "rustic" ? "rgba(28,18,9,0.7)" : "rgba(13,10,14,0.75)",
+        border: `1.5px solid rgba(${accentRGB},0.15)`,
+        boxShadow: `0 24px 80px -12px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05)`,
+        backdropFilter: "blur(32px)",
+        borderRadius: "4px",
       }}
     >
       {/* Live Preview Panel */}
       <div
-        className="relative w-full mb-10 overflow-hidden"
+        className="relative w-full mb-16 overflow-hidden"
         style={{
-          height: "260px",
-          borderRadius: "4px",
+          height: "300px",
+          borderRadius: "2px",
           background: activeColors.length
-            ? `linear-gradient(135deg, ${activeColors[0].color}40 0%, ${(activeColors[1] || activeColors[0]).color}60 60%, ${activeColors[0].color}20 100%)`
+            ? `linear-gradient(135deg, ${activeColors[0].color}30 0%, ${(activeColors[1] || activeColors[0]).color}50 60%, ${activeColors[0].color}10 100%)`
             : "rgba(0,0,0,0.5)",
           transition: "background 0.8s cubic-bezier(0.4, 0, 0.2, 1)",
-          border: `1px solid rgba(${accentRGB},0.1)`,
+          border: `1px solid rgba(${accentRGB},0.15)`,
         }}
       >
         {/* Preview elements */}
         <div
-          className="absolute inset-0 flex flex-col items-center justify-center text-center p-6"
+          className="absolute inset-0 flex flex-col items-center justify-center text-center p-8"
           style={{ zIndex: 2 }}
         >
           <div
             style={{
-              fontSize: "0.6rem",
-              letterSpacing: "0.5em",
+              fontSize: "0.65rem",
+              letterSpacing: "0.6em",
               color: activeColors[0]?.color || accent,
-              marginBottom: "10px",
+              marginBottom: "12px",
               fontFamily: "var(--font-ui)",
-              opacity: 0.8,
+              opacity: 0.9,
+              fontWeight: 600,
             }}
           >
             LAST CALL WEDDING CO. · YOUR PALETTE
@@ -91,36 +94,37 @@ export default function MoodBoard({ venue }: Props) {
           <div
             style={{
               fontFamily: "var(--font-display)",
-              fontSize: "clamp(2rem, 5vw, 3.5rem)",
-              color: "rgba(245,240,232,0.95)",
+              fontSize: "clamp(2.5rem, 6vw, 4rem)",
+              color: "rgba(245,240,232,0.98)",
               lineHeight: 1,
-              textShadow: `0 4px 30px ${activeColors[0]?.color}80`,
+              textShadow: `0 4px 40px ${activeColors[0]?.color}90`,
             }}
           >
             Your Perfect Day
           </div>
-          <div style={{ display: "flex", gap: "8px", marginTop: "16px" }}>
+          <div style={{ display: "flex", gap: "12px", marginTop: "24px" }}>
             {activeColors.map((c) => (
               <div
                 key={c.id}
                 style={{
-                  width: "32px",
-                  height: "32px",
+                  width: "36px",
+                  height: "36px",
                   borderRadius: "50%",
                   background: c.color,
-                  border: "2px solid rgba(255,255,255,0.15)",
-                  boxShadow: `0 0 20px ${c.color}60`,
+                  border: "2px solid rgba(255,255,255,0.25)",
+                  boxShadow: `0 0 25px ${c.color}70`,
                   transition: "all 0.4s ease",
                 }}
               />
             ))}
           </div>
           <div
-            className="font-ui mt-4 text-xs"
+            className="font-ui mt-6 text-xs"
             style={{
-              color: "rgba(255,255,255,0.4)",
-              letterSpacing: "0.2em",
+              color: "rgba(255,255,255,0.5)",
+              letterSpacing: "0.25em",
               textTransform: "uppercase",
+              fontWeight: 600,
             }}
           >
             {activeFloral.name} · {activeColors.map((c) => c.name).join(" + ")}
@@ -131,10 +135,10 @@ export default function MoodBoard({ venue }: Props) {
         <div
           className="absolute"
           style={{
-            right: "20px",
-            top: "20px",
-            fontSize: "3rem",
-            opacity: 0.08,
+            right: "30px",
+            top: "30px",
+            fontSize: "4rem",
+            opacity: 0.1,
             fontFamily: "var(--font-display)",
             color: activeColors[0]?.color,
             transition: "color 0.6s ease",
@@ -147,29 +151,30 @@ export default function MoodBoard({ venue }: Props) {
         <div
           className="absolute bottom-0 left-0 right-0"
           style={{
-            height: "60px",
+            height: "80px",
             background:
-              "linear-gradient(to top, rgba(0,0,0,0.4), transparent)",
+              "linear-gradient(to top, rgba(0,0,0,0.5), transparent)",
           }}
         />
       </div>
 
       {/* Color Palette Swatches */}
-      <div className="mb-10">
+      <div className="mb-16">
         <div
-          className="font-ui text-xs mb-5"
+          className="font-ui text-xs mb-8"
           style={{
-            color: `rgba(${accentRGB},0.6)`,
+            color: `rgba(${accentRGB},0.8)`,
             letterSpacing: "0.4em",
+            fontWeight: 600,
           }}
         >
           COLOR PALETTE · SELECT UP TO 3
         </div>
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-6">
           {palettes.map((p) => (
             <div
               key={p.id}
-              className="cursor-trigger text-center"
+              className="cursor-trigger text-center group"
               onClick={() => toggleColor(p.id)}
             >
               <div
@@ -177,26 +182,27 @@ export default function MoodBoard({ venue }: Props) {
                 style={{
                   background: p.color,
                   border: selectedColors.includes(p.id)
-                    ? `2px solid ${accent}`
-                    : "2px solid transparent",
+                    ? `2.5px solid ${accent}`
+                    : "2px solid rgba(255,255,255,0.1)",
                   transform: selectedColors.includes(p.id)
                     ? "scale(1.2)"
                     : "scale(1)",
                   boxShadow: selectedColors.includes(p.id)
-                    ? `0 0 20px ${p.color}60, 0 0 0 4px rgba(${accentRGB},0.2)`
+                    ? `0 0 30px ${p.color}80, 0 0 0 6px rgba(${accentRGB},0.2)`
                     : "none",
-                  transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+                  transition: "all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
                 }}
               />
               <div
-                className="font-ui mt-2"
+                className="font-ui mt-3"
                 style={{
-                  fontSize: "0.6rem",
-                  letterSpacing: "0.1em",
+                  fontSize: "0.65rem",
+                  letterSpacing: "0.15em",
                   color: selectedColors.includes(p.id)
                     ? accent
-                    : "rgba(255,255,255,0.3)",
+                    : "rgba(255,255,255,0.4)",
                   transition: "color 0.3s ease",
+                  fontWeight: 500,
                 }}
               >
                 {p.name}
@@ -207,69 +213,71 @@ export default function MoodBoard({ venue }: Props) {
       </div>
 
       {/* Floral Style */}
-      <div>
+      <div className="pt-4" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
         <div
-          className="font-ui text-xs mb-5"
+          className="font-ui text-xs mb-8 mt-8"
           style={{
-            color: `rgba(${accentRGB},0.6)`,
+            color: `rgba(${accentRGB},0.8)`,
             letterSpacing: "0.4em",
+            fontWeight: 600,
           }}
         >
           FLORAL STYLE
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {FLORAL_STYLES.map((f) => (
             <button
               key={f.id}
               onClick={() => setSelectedFloral(f.id)}
-              className="cursor-trigger p-4 text-center transition-all duration-300"
+              className="cursor-trigger p-8 text-center transition-all duration-300 relative group"
               style={{
-                border: `1px solid ${
+                border: `1.5px solid ${
                   selectedFloral === f.id
                     ? accent
-                    : "rgba(255,255,255,0.08)"
+                    : "rgba(255,255,255,0.06)"
                 }`,
                 borderRadius: "4px",
                 background:
                   selectedFloral === f.id
-                    ? `rgba(${accentRGB},0.08)`
-                    : "rgba(255,255,255,0.02)",
+                    ? `rgba(${accentRGB},0.12)`
+                    : "rgba(255,255,255,0.03)",
                 cursor: "pointer",
+                backdropFilter: "blur(4px)",
               }}
             >
               <div
                 style={{
-                  fontSize: "1.5rem",
-                  marginBottom: "8px",
+                  fontSize: "1.8rem",
+                  marginBottom: "12px",
                   color:
-                    selectedFloral === f.id ? accent : "rgba(255,255,255,0.3)",
-                  transition: "color 0.3s ease",
+                    selectedFloral === f.id ? accent : "rgba(255,255,255,0.4)",
+                  transition: "all 0.3s ease",
                   fontFamily: "serif",
+                  transform: selectedFloral === f.id ? "scale(1.1)" : "scale(1)",
                 }}
               >
                 {f.icon}
               </div>
               <div
-                className="font-ui text-xs font-medium"
+                className="font-ui text-xs font-bold"
                 style={{
                   color:
                     selectedFloral === f.id
                       ? accent
-                      : "rgba(255,255,255,0.5)",
-                  letterSpacing: "0.08em",
+                      : "rgba(255,255,255,0.7)",
+                  letterSpacing: "0.15em",
                   transition: "color 0.3s ease",
                 }}
               >
-                {f.name}
+                {f.name.toUpperCase()}
               </div>
               <div
-                className="font-body mt-1"
+                className="font-body mt-2"
                 style={{
-                  fontSize: "0.75rem",
-                  color: "rgba(255,255,255,0.25)",
+                  fontSize: "0.85rem",
+                  color: "rgba(255,255,255,0.35)",
                   fontStyle: "italic",
-                  maxWidth: "none",
-                  lineHeight: 1.4,
+                  lineHeight: 1.5,
                 }}
               >
                 {f.desc}

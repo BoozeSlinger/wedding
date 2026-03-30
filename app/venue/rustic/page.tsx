@@ -523,21 +523,20 @@ export default function RusticVenuePage() {
       {/* ─── MOOD BOARD ─── */}
       <section className="reveal-section py-60 md:py-80 px-6 relative z-10" style={{ background: "rgba(28,18,9,0.3)" }}>
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-32">
+          <div className="text-center mb-20 md:mb-24">
             <h2
               className="font-display"
               style={{
-                fontSize: "clamp(2.5rem, 6vw, 5.5rem)",
+                fontSize: "clamp(3rem, 7vw, 6.5rem)",
                 color: "var(--color-cream)",
-                lineHeight: 1.3,
+                lineHeight: 1.1,
               }}
             >
               Visualise the 
-              <br />
               Atmosphere.
             </h2>
           </div>
-          <div className="mt-12">
+          <div className="mt-16">
             <MoodBoard venue="rustic" />
           </div>
         </div>
@@ -546,27 +545,26 @@ export default function RusticVenuePage() {
       {/* ─── CONVERSATIONAL CONCIERGE ─── */}
       <section className="reveal-section py-60 md:py-80 px-6 relative z-10">
         <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-32">
+          <div className="text-center mb-20 md:mb-24">
             <div
-              className="font-ui text-xs mb-10"
-              style={{ color: "rgba(196,146,42,0.6)", letterSpacing: "0.4em" }}
+              className="font-ui text-xs mb-8"
+              style={{ color: "rgba(196,146,42,0.6)", letterSpacing: "0.5em" }}
             >
               YOUR DIGITAL CONCIERGE
             </div>
             <h2
               className="font-display"
               style={{
-                fontSize: "clamp(2.5rem, 6vw, 5rem)",
+                fontSize: "clamp(3.5rem, 8vw, 7rem)",
                 color: "var(--color-cream)",
                 lineHeight: 1,
               }}
             >
               Ready to
-              <br />
               Details?
             </h2>
           </div>
-          <div className="mt-12">
+          <div className="mt-16 relative">
             <ConciergeChatWidget venue="rustic" />
           </div>
         </div>
