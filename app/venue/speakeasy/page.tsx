@@ -116,22 +116,22 @@ export default function SpeakeasyVenuePage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/reserve_editorial_hero_1774868160148.png" 
+            src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1400&q=85" 
             alt="The Reserve Venue" 
             fill 
             className="object-cover opacity-60"
             priority
           />
-          <div className="absolute inset-0 bg-linear-to-b from-stone-950/60 via-stone-950/30 to-stone-950" />
+          <div className="absolute inset-0 bg-linear-to-b from-stone-950/70 via-stone-950/40 to-stone-950" />
         </div>
 
         {/* Brand Watermark Overlay */}
-        <div className="absolute top-24 md:top-32 left-1/2 -translate-x-1/2 z-10 opacity-40 pointer-events-none">
+        <div className="absolute top-20 md:top-24 left-1/2 -translate-x-1/2 z-0 opacity-40 pointer-events-none">
           <Image 
             src="/logonobg.png"
             alt="Last Call Wedding Co."
-            width={320}
-            height={90}
+            width={380}
+            height={110}
             className="brightness-0 invert"
             priority
           />
@@ -144,40 +144,42 @@ export default function SpeakeasyVenuePage() {
           style={{
             inset: 0,
             background:
-              "radial-gradient(ellipse 70% 50% at 30% 60%, rgba(155,28,28,0.1) 0%, transparent 70%)",
+              "radial-gradient(ellipse 70% 50% at 30% 60%, rgba(155,28,28,0.15) 0%, transparent 70%)",
           }}
         />
 
         {/* Brick texture lines */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 opacity-30"
           style={{
             backgroundImage: `repeating-linear-gradient(
               0deg,
-              rgba(92,45,30,0.08),
-              rgba(92,45,30,0.08) 1px,
+              rgba(92,45,30,0.1),
+              rgba(92,45,30,0.1) 1px,
               transparent 1px,
               transparent 40px
             )`,
           }}
         />
 
-        <div className="relative text-center px-6 max-w-5xl mx-auto" style={{ zIndex: 2 }}>
+        <div className="relative text-center px-6 max-w-7xl mx-auto" style={{ zIndex: 2 }}>
           <div
-            className="speak-sub font-ui text-xs tracking-[0.5em] mb-6"
-            style={{ color: "rgba(212,160,23,0.6)" }}
+            className="speak-sub font-ui text-xs tracking-[0.6em] mb-10"
+            style={{ color: "rgba(212,160,23,0.7)" }}
           >
             VENUE B · THE RESERVE · DOWNTOWN AUSTIN, TX
           </div>
 
           <h1
-            className="speak-headline font-display"
+            className="speak-headline font-display uppercase"
             style={{
-              fontSize: "clamp(3.5rem, 9vw, 9rem)",
+              fontSize: "clamp(4.5rem, 11vw, 11.5rem)",
+              fontWeight: 800,
               color: "var(--color-cream)",
-              lineHeight: 0.92,
+              lineHeight: 0.88,
+              letterSpacing: "-0.02em",
               textShadow:
-                "0 0 80px rgba(155,28,28,0.4), 0 20px 60px rgba(0,0,0,0.9)",
+                "0 0 100px rgba(155,28,28,0.5), 0 30px 80px rgba(0,0,0,0.95)",
             }}
           >
             The Night
@@ -186,7 +188,7 @@ export default function SpeakeasyVenuePage() {
             <span
               style={{
                 color: "var(--speak-amber)",
-                textShadow: "0 0 40px rgba(212,160,23,0.5)",
+                textShadow: "0 0 60px rgba(212,160,23,0.6)",
               }}
             >
               Forget.
@@ -481,34 +483,34 @@ export default function SpeakeasyVenuePage() {
             venue="speakeasy"
             images={[
               {
-                src: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1400&q=85",
-                alt: "The Velvet Lounge Mixology",
-                label: "Bespoke Mixology",
+                src: "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?w=1200&q=85",
+                alt: "Artisan mixology with crystal glassware",
+                label: "BESPOKE MIXOLOGY",
               },
               {
-                src: "https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=900&q=80",
-                alt: "Vault Jazz Stage",
-                label: "Live Jazz Stage",
+                src: "https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=1200&q=85",
+                alt: "The Vault stage with upright piano and vintage mics",
+                label: "LIVE JAZZ STAGE",
               },
               {
-                src: "https://images.unsplash.com/photo-1563298723-dcfebaa392e3?w=900&q=80",
-                alt: "Candlelit Dining Space",
-                label: "Intimate Dining",
+                src: "https://images.unsplash.com/photo-1563298723-dcfebaa392e3?w=1200&q=85",
+                alt: "Long candlelit tables under original 1920s brickwork",
+                label: "INTIMATE DINING",
               },
               {
                 src: "https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?w=1200&q=85",
-                alt: "Craft Cocktail Details",
-                label: "1924 Details",
+                alt: "Close-up of reclaimed mahogany and brass architectural details",
+                label: "1924 LANDMARK DETAILS",
               },
               {
-                src: "https://images.unsplash.com/photo-1436018626274-89acd1d6ec9d?w=900&q=80",
-                alt: "Vault Ceremony Setup",
-                label: "The Vault Ceremony",
+                src: "https://images.unsplash.com/photo-1436018626274-89acd1d6ec9d?w=1200&q=85",
+                alt: "The hidden ceremory vault illuminated by 200 candles",
+                label: "THE VAULT CEREMONY",
               },
               {
                 src: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=1200&q=85",
-                alt: "Velvet Draping and Neon ambiance",
-                label: "Late Night Ambiance",
+                alt: "Velvet drapes and neon amber glow at midnight",
+                label: "LATE NIGHT AMBIANCE",
               },
             ]}
           />
@@ -545,8 +547,8 @@ export default function SpeakeasyVenuePage() {
             }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1542282811-943ef1a977c3?w=1200&q=80"
-              alt="Moody speakeasy ambiance"
+              src="https://images.unsplash.com/photo-1542282811-943ef1a977c3?w=1400&q=85"
+              alt="Moody speakeasy ambiance with leather and amber lighting"
               fill
               className="object-cover"
             />

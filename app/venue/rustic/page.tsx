@@ -129,17 +129,17 @@ export default function RusticVenuePage() {
         {/* Background Image */}
         <div className="absolute inset-0 duration-1500 transition-transform">
           <Image 
-            src="/ranch_editorial_hero_1774868144903.png" 
+            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=2048" 
             alt="The Ranch Grounds" 
             fill 
-            className="object-cover opacity-60"
+            className="object-cover opacity-70"
             priority
           />
-          <div className="absolute inset-0 bg-linear-to-b from-stone-950/40 via-stone-950/20 to-stone-950" />
+          <div className="absolute inset-0 bg-linear-to-b from-stone-950/60 via-stone-950/30 to-stone-950" />
         </div>
 
         {/* Brand Watermark Overlay */}
-        <div className="absolute top-24 md:top-32 left-1/2 -translate-x-1/2 z-10 opacity-40 pointer-events-none">
+        <div className="absolute top-16 md:top-24 left-1/2 -translate-x-1/2 z-0 opacity-40 pointer-events-none">
           <Image 
             src="/logonobg.png"
             alt="Last Call Wedding Co."
@@ -185,10 +185,11 @@ export default function RusticVenuePage() {
           <h1
             className="hero-headline font-display"
             style={{
-              fontSize: "clamp(4rem, 10vw, 10rem)",
+              fontSize: "clamp(4.6rem, 11.5vw, 11.5rem)",
+              fontWeight: 800,
               color: "var(--color-parchment)",
               lineHeight: 0.9,
-              textShadow: "0 10px 80px rgba(196,146,42,0.3)",
+              textShadow: "0 10px 80px rgba(196,146,42,0.4)",
             }}
           >
             Where Your
@@ -353,34 +354,34 @@ export default function RusticVenuePage() {
             venue="rustic"
             images={[
               {
-                src: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1400&q=85",
-                alt: "Outdoor ceremony on a Texas ranch at golden hour",
-                label: "Open Ceremony Field",
+                src: "https://images.unsplash.com/photo-1510076857177-7470076d4098?w=1400&q=85",
+                alt: "Golden hour ranch ceremony looking toward the horizon",
+                label: "THE CEREMONY FIELD",
               },
               {
-                src: "https://images.unsplash.com/photo-1519741347686-c1e0aadf4611?w=900&q=80",
-                alt: "Rustic barn reception with string lights",
-                label: "Barn Reception Hall",
+                src: "https://images.unsplash.com/photo-1475761362611-ec598571a7ce?w=1200&q=85",
+                alt: "Dramatic barn interior with warm lighting and exposed wood",
+                label: "THE RUSTIC RECEPTION",
               },
               {
-                src: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=900&q=80",
-                alt: "Wedding reception table setting with wildflowers",
-                label: "Table Design",
+                src: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1200&q=85",
+                alt: "Long wooden tables with artisan floral arrangements",
+                label: "ARTISAN DINING",
               },
               {
-                src: "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?w=1200&q=85",
-                alt: "Couple at sunset overlooking the ranch",
-                label: "Sunset Portraits",
+                src: "https://images.unsplash.com/photo-1512403614274-1224f8d975db?w=1400&q=85",
+                alt: "A wide-angle sunset view of the Texas ranch",
+                label: "RANCH VISTAS",
               },
               {
-                src: "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1200&q=85",
-                alt: "The Fire Circle gather at dusk",
-                label: "The Fire Circle",
+                src: "https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=1200&q=85",
+                alt: "A gathering around the stone fire circle at night",
+                label: "THE FIRE CIRCLE",
               },
               {
-                src: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1200&q=85",
-                alt: "Ranch wedding cocktail hour in the pasture",
-                label: "Cocktail Hour",
+                src: "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?w=1200&q=85",
+                alt: "Open-air cocktail lounge with leather and wood accents",
+                label: "COCKTAIL HOUR",
               },
             ]}
           />
@@ -482,7 +483,7 @@ export default function RusticVenuePage() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
-              src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&q=80" 
+              src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1400&q=85" 
               alt="Open-Fire Feast"
               className="absolute inset-0 w-full h-full object-cover" 
             />
